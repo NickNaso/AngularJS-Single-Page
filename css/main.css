@@ -6,6 +6,12 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+.img-responsive {
+  padding: 0 20px 0 20px;
+  margin:0 auto;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -19,3 +25,4 @@ footer p{
   text-align: center;
   padding-top: 20px;
 }
+

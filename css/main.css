@@ -7,8 +7,8 @@ body {
   margin-bottom: 60px;
 }
 
-.img-responsive {
-  padding: 0 20px 0 20px;
+.cover-art {
+  padding: 0 20px 20px 20px;
   margin:0 auto;
 }
 

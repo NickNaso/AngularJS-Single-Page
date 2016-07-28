@@ -14,11 +14,11 @@ app.config(function($routeProvider) {
 		controller: "homeController"
 	})
 	.when("/about", {
-		templateUrl: "../partials/about.html",
+		templateUrl: "partials/about.html",
 		controller: "homeController"
 	})
 	.when("/contact", {
-		templateUrl: "../partials/contact.html",
+		templateUrl: "partials/contact.html",
 		controller: "homeController"
 	})
 })

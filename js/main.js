@@ -9,16 +9,43 @@ app.config(function($stateProvider) {
 	$stateProvider
 	.state("home", {
 		url:"/home",
-		templateUrl: "partials/home.html",
+		views: {
+			"main@": {
+				templateUrl: "partials/home.html"
+			}
+		}	
 	})
 	.state("about", {
 		url:"/about",
-		templateUrl: "partials/about.html",
+		views: {
+			"main@": {
+				templateUrl: "partials/about.html"
+			}
+		}	
 	})
 	.state("contact", {
 		url:"/contact",
-		templateUrl: "partials/contact.html",
-		controller: "contactCtrl"
+		views: {
+			"main@": {
+				templateUrl: "partials/contact.html"
+			}
+		}	
+	})
+	.state("info", {
+		parent:"contact",
+		views: {
+			"contact-form@contact": {
+				templateUrl: "partials/contact-info.html"
+			}
+		}	
+	})
+	.state("message", {
+		parent:"contact",
+		views: {
+			"contact-form@contact": {
+				templateUrl: "partials/contact-message.html"
+			}
+		}	
 	})
 })
 

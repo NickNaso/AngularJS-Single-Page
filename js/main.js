@@ -5,7 +5,7 @@ Main AngularJS Single-Page Web App
 var app = angular.module('Single-Page-App', ['ui.router', 'ngAnimate']);
 
 
-app.config(function($stateProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 	.state("home", {
 		url:"/home",
@@ -31,22 +31,18 @@ app.config(function($stateProvider) {
 			}
 		}	
 	})
-	.state("info", {
-		parent:"contact",
-		views: {
-			"contact-form@contact": {
-				templateUrl: "partials/contact-info.html"
-			}
-		}	
+
+	.state("contact.info", {
+		url: '/info',
+		templateUrl: "partials/contact-info.html"
 	})
-	.state("message", {
-		parent:"contact",
-		views: {
-			"contact-form@contact": {
-				templateUrl: "partials/contact-message.html"
-			}
-		}	
-	})
+
+	.state("contact.message", {
+		url: '/message',
+		templateUrl: "partials/contact-message.html"
+	});
+
+	$urlRouterProvider.otherwise('/contact/info');
 })
 
 

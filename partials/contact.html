@@ -2,20 +2,20 @@
 
 <div ng-controller="contactCtrl">
 <form>
+
 <div ng-include="'partials/contact-info.html'"></div>
 
-<!--
+<!-- This is the two way binding example for real time validation -->
 
-This is the two way binding example for real time validation
 
-<input type="text" name="email" ng-model="message">
+
+
+
+
+<div ui-view></div>
+</form>
 <p> {{message}} </p>
-
--->
-
-<div ui-view="contact-form"></div>
-
 </br>
-<a ui-sref="message"><button class="btn btn-primary btn-large">Next</button></a>
+<a ui-sref=".message"><button class="btn btn-primary btn-large">Next</button></a>
 
 </div>

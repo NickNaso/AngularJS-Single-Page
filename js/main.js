@@ -2,7 +2,7 @@
 Main AngularJS Single-Page Web App
 */
 
-var app = angular.module('Single-Page-App', ['ngRoute']);
+var app = angular.module('Single-Page-App', ['ngRoute', 'ui.router', 'ngAnimate']);
 
 
 app.config(function($routeProvider) {

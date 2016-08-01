@@ -2,18 +2,21 @@
 Main AngularJS Single-Page Web App
 */
 
-var app = angular.module('Single-Page-App', ['ngRoute', 'ui.router', 'ngAnimate']);
+var app = angular.module('Single-Page-App', ['ui.router', 'ngAnimate']);
 
 
-app.config(function($routeProvider) {
-	$routeProvider
-	.when("/home", {
+app.config(function($stateProvider) {
+	$stateProvider
+	.state("home", {
+		url:"/home",
 		templateUrl: "partials/home.html",
 	})
-	.when("/about", {
+	.state("about", {
+		url:"/about",
 		templateUrl: "partials/about.html",
 	})
-	.when("/contact", {
+	.state("contact", {
+		url:"/contact",
 		templateUrl: "partials/contact.html",
 		controller: "contactCtrl"
 	})

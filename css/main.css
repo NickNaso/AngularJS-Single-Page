@@ -15,7 +15,13 @@ body {
 /* Form Styling */
 .center-form{
     margin: 0 auto;
-    width:50% /* value of your choice which suits your alignment */
+    width:65% /* value of your choice which suits your alignment */
+}
+
+@media screen and (min-width:720px) {
+    .center-form{
+        width:45% /* value of your choice which suits your alignment */
+}
 }
 
 .center-fields {

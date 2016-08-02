@@ -31,18 +31,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			}
 		}	
 	})
-
-	.state("contact.info", {
-		url: '/info',
-		templateUrl: "partials/contact-info.html"
-	})
-
-	.state("contact.message", {
-		url: '/message',
-		templateUrl: "partials/contact-message.html"
-	});
-
-	$urlRouterProvider.otherwise('/contact/info');
 })
 
 

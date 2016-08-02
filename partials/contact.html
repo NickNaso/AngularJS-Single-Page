@@ -1,21 +1,57 @@
-<h3>Contact Form with 2 way binding Test </h3>
+<h3 class="text-center">Contact Us</h3>
 
 <div ng-controller="contactCtrl">
-<form>
+	<div class="container center-form">
+		<div class="row">
+			<form class="form-horizontal" method="post">
+				<div class="center-fields">
+					<div class="form-group">
+						<div class="col-xs-12">
+							<label>Email</label>
+							<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-envelope"></i>
+							<input class="form-control" type="text" name="email" ng-model="contact.email">
+							</div>
+						</div>
+					</div>
 
-<div ng-include="'partials/contact-info.html'"></div>
+						
+					<div class="form-group has-feedback">				
+						<div class="col-xs-12">
+							<label>Name</label>
+							<div class="inner-addon left-addon">
+							<input class="form-control" type="text" name="email" ng-model="contact.name">
+							<i class="glyphicon glyphicon-user"></i>
+							</div>
+						</div>						
+					</div>
+						
 
-<!-- This is the two way binding example for real time validation -->
+					<div class="form-group has-feedback">
+						<div class="col-xs-12">
+							<label>Subject</label>
+							<div class="inner-addon left-addon">
+							<input class="form-control" ng-model="contact.subject"></input>
+							<i class="glyphicon glyphicon-comment"></i>
+							</div>
+						</div>
+					</div>
+				</div> <!-- closing class="center-fields" -->
 
+					<div class="form-group">
+						<div class="col-xs-12">
+							<label>Message</label>
+							<textarea class="form-control" rows="5" cols="8" ng-model="contact.message"></textarea>
+						</div>
+					</div>
 
+				<button class="btn btn-primary btn-large">Send</button>
+				
+			</div> <!-- Clossing row div -->
+		</div> <!-- Closing Container div -->
+	</form>
 
-
-
-
-<div ui-view></div>
-</form>
-<p> {{message}} </p>
 </br>
-<a ui-sref=".message"><button class="btn btn-primary btn-large">Next</button></a>
+<p> {{contact}} </p>
 
-</div>
+</div> <!-- Closing ng-controller -->

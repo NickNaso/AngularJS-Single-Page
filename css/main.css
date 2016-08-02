@@ -12,6 +12,45 @@ body {
   margin:0 auto;
 }
 
+/* Form Styling */
+.center-form{
+    margin: 0 auto;
+    width:50% /* value of your choice which suits your alignment */
+}
+
+.center-fields {
+    margin: 0 auto;
+    width:70%
+}
+
+label {
+  width:100%;
+  text-align: center;
+}
+
+/* Glyphicon stylings below thanks 
+to KyleMit 
+http://stackoverflow.com/a/18839305/6027264 */
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -25,4 +64,9 @@ footer p{
   text-align: center;
   padding-top: 20px;
 }
+
+
+
+
+
 

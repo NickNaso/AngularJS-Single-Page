@@ -6,6 +6,7 @@ var app = angular.module('Single-Page-App', ['ui.router', 'ngAnimate', 'ngMessag
 
 
 app.config(function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise('/home');
 	$stateProvider
 	.state("home", {
 		url:"/home",

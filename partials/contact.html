@@ -3,44 +3,56 @@
 <div ng-controller="contactCtrl">
 	<div class="container center-form">
 		<div class="row">
-			<form class="form-horizontal" method="post">
+			<form name="contactForm" class="form-horizontal" ng-submit="submitForm()" method="post" novalidate>
 				<div class="center-fields">
 
-					<div class="form-group has-feedback">				
+					<div class="form-group" ng-class="{ 'has-error': contactForm.name.$touched && contactForm.name.$invalid }">				
 						<div class="col-xs-12">
 							<label>Name</label>
 							<div class="inner-addon left-addon">
-							<input class="form-control" type="text" name="email" ng-model="contact.name">
-							<i class="glyphicon glyphicon-user"></i>
+								<input class="form-control" type="text" name="name" ng-model="contact.name" ng-minlength="2" ng-maxlength="20" required>
+								<i class="glyphicon glyphicon-user"></i>					
 							</div>
+							<div class="help-block text-center" ng-messages="contactForm.name.$error" ng-if="contactForm.name.$touched">
+								<div ng-messages-include="partials/messages.html"></div>
+							</div>	
 						</div>						
 					</div>
 
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': contactForm.email.$touched && contactForm.email.$invalid }">
 						<div class="col-xs-12">
 							<label>Email</label>
 							<div class="inner-addon left-addon">
 							<i class="glyphicon glyphicon-envelope"></i>
-							<input class="form-control" type="text" name="email" ng-model="contact.email">
+							<input class="form-control" type="email" name="email" ng-model="contact.email" ng-maxlength="30" required>
 							</div>
+							<div class="help-block text-center" ng-messages="contactForm.email.$error" ng-if="contactForm.email.$touched">
+								<div ng-messages-include="partials/messages.html"></div>
+							</div>	
 						</div>
 					</div>		
 
-					<div class="form-group has-feedback">
+					<div class="form-group" ng-class="{ 'has-error': contactForm.subject.$touched && contactForm.subject.$invalid }">
 						<div class="col-xs-12">
 							<label>Subject</label>
 							<div class="inner-addon left-addon">
-							<input class="form-control" ng-model="contact.subject"></input>
+							<input class="form-control" type="text" name="subject" ng-model="contact.subject" ng-minlength="4" ng-maxlength="100" required>
 							<i class="glyphicon glyphicon-comment"></i>
+							</div>
+							<div class="help-block text-center" ng-messages="contactForm.subject.$error" ng-if="contactForm.subject.$touched">
+								<div ng-messages-include="partials/messages.html"></div>
 							</div>
 						</div>
 					</div>
 				</div> <!-- closing class="center-fields" -->
 
-					<div class="form-group">
+					<div class="form-group" ng-class="{ 'has-error': contactForm.message.$touched && contactForm.message.$invalid }">
 						<div class="col-xs-12">
 							<label>Message</label>
-							<textarea class="form-control" rows="5" cols="8" ng-model="contact.message"></textarea>
+							<textarea class="form-control" rows="5" cols="8" type="text" name="message" ng-model="contact.message" ng-minlength="25" ng-maxlength="600" required></textarea>
+						</div>
+						<div class="help-block text-center" ng-messages="contactForm.message.$error" ng-if="contactForm.message.$touched">
+								<div ng-messages-include="partials/messages.html"></div>
 						</div>
 					</div>
 
@@ -54,5 +66,13 @@
 
 </br>
 <p> {{contact}} </p>
+
+<!-- For trouble shooting purposes -->
+<!--
+<pre>contactForm.name.$error = {{ contactForm.name.$error | json }}</pre>
+<pre>contactForm.name.$error = {{ contactForm.email.$error | json }}</pre>
+<pre>contactForm.name.$error = {{ contactForm.subject.$error | json }}</pre>
+<pre>contactForm.name.$error = {{ contactForm.message.$error | json }}</pre>
+-->
 
 </div> <!-- Closing ng-controller -->

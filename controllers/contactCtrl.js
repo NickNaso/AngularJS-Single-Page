@@ -27,3 +27,6 @@ angular
 	}
 });
 
+//Helpful video about sending data from angular form to php 
+//https://www.youtube.com/watch?v=gVd6Mo-VEQg
+

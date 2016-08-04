@@ -10,6 +10,4 @@
 
 	$msg = "Hey ". $name. "! your email is: ".$email." and your subject is ".$subject." and message: ". $message;
 	echo $msg;
-
-
 ?>

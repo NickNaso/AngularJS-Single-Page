@@ -6,9 +6,11 @@
 			<form name="contactForm" class="form-horizontal" ng-submit="submitForm()" method="post" novalidate>
 				<div class="center-fields">
 					<div class = "text-center"> 
-						{{msg1}}
-						{{msg2}}
-						{{msg3}}
+						{{nameError}}
+						{{emailError}}
+						{{subjectError}}
+						{{messageError}}
+						{{successMsg}} 
 					</div>
 
 					<div class="form-group" ng-class="{ 'has-error': contactForm.name.$touched && contactForm.name.$invalid }">				
@@ -71,7 +73,7 @@
 
 </br>
 <p> {{contact}} </p>
-<p> {{msg1}} </p>
+
 
 <!-- For trouble shooting purposes -->
 <!--

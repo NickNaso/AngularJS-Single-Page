@@ -16,10 +16,15 @@ angular
 			};
 			var request = $http(config);
 			request.then(function (response){
-				$scope.msg1 = response.data[0];
-				$scope.msg2 = response.data[1];
-				$scope.msg3 = response.data[2];
-				console.log($scope.msg);
+				//these values are for the error response object
+				$scope.nameError = response.data['name-error'];
+				$scope.messageError = response.data['message-error'];
+				$scope.subjectError = response.data['subject-error'];
+				$scope.emailError = response.data['email-error'];
+				
+				// this value is populated when no error messages exist
+				$scope.successMsg = response.data;
+				console.log($scope.successMsg);
 			}, function (error){
 				$scope.msg = error.data;
 				console.log($scope.msg);

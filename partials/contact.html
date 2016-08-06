@@ -5,6 +5,11 @@
 		<div class="row">
 			<form name="contactForm" class="form-horizontal" ng-submit="submitForm()" method="post" novalidate>
 				<div class="center-fields">
+					<div class = "text-center"> 
+						{{msg1}}
+						{{msg2}}
+						{{msg3}}
+					</div>
 
 					<div class="form-group" ng-class="{ 'has-error': contactForm.name.$touched && contactForm.name.$invalid }">				
 						<div class="col-xs-12">
@@ -66,7 +71,7 @@
 
 </br>
 <p> {{contact}} </p>
-<p> {{msg}} </p>
+<p> {{msg1}} </p>
 
 <!-- For trouble shooting purposes -->
 <!--

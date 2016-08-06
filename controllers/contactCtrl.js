@@ -1,9 +1,8 @@
 angular
 	.module('Single-Page-App')
 	.controller('contactCtrl', function($scope, $http){
-		$scope.contact = {};
-
 		$scope.contact = {name : '', email : '', subject : '', message : ''};
+
 		$scope.submitForm = function() {
      		var config = {
 				method: 'POST',
@@ -17,7 +16,9 @@ angular
 			};
 			var request = $http(config);
 			request.then(function (response){
-				$scope.msg = response.data;
+				$scope.msg1 = response.data[0];
+				$scope.msg2 = response.data[1];
+				$scope.msg3 = response.data[2];
 				console.log($scope.msg);
 			}, function (error){
 				$scope.msg = error.data;

@@ -18,26 +18,38 @@ angular
 			};
 			var request = $http(config);
 			request.then(function (response){
+
 				if(typeof(response.data) == 'string') {
-					// this value is populated when no error messages exist
+					// make all error messages blank when 
+					// php return a string (which is the success message)
 					$scope.nameError = "";
 					$scope.messageError = "";
 					$scope.subjectError = "";
 					$scope.emailError = "";
 
+					// put the success string from php into 
+					// the successMsg so it can be accessed in the view
 					$scope.successMsg = response.data;
+
+					// clear all form values 
+					// ######### This is not working currently ############
+					$scope.contactForm.$setPristine();
+
 					console.log($scope.successMsg);
 					console.log("not an object");
 				} else {
-						//these values are for the error response object
+					if(typeof(response.data) == 'object') {
+					// if php sends an object 
+					// (which contains all the error messages present) 
+					// populate variables with error messages
+					
 					$scope.nameError = response.data['name-error'];
 					$scope.messageError = response.data['message-error'];
 					$scope.subjectError = response.data['subject-error'];
 					$scope.emailError = response.data['email-error'];
 
-					$scope.successMsg = "";
-
 					console.log("it is an object");
+					}
 				}
 				
 				

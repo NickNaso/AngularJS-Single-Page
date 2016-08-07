@@ -34,18 +34,18 @@
 		}
 		
 	} else {
-		$name_error = 'You forgot to enter your name ';
+		$name_error = 'Your name is too short or not entered. Please revise. ';
 	}
 
 	if (!empty($message)) {
 		if (preg_match($mess_pattern, $message)){
 			$mess_error = "";
 		} else {
-			$mess_error = 'No funky characters are allowed in your message, please revise ';
+			$mess_error = 'No funky characters are allowed in your message. Please revise ';
 		}
 		
 	} else {
-		$mess_error = 'You forgot to enter a message ';
+		$mess_error = 'Your message is too short or empty.';
 	}
 
 	if (!empty($subject)) {
@@ -56,7 +56,7 @@
 		}
 		
 	} else {
-		$sub_error = 'You forgot to enter a subject ';
+		$sub_error = 'Your subject is too short or empty.';
 	}
 	
 
@@ -67,12 +67,12 @@
 			$email_error = "";
 		} 
 	} else {
-		$email_error = 'You forgot to enter an email ';
+		$email_error = 'Oops somthing looks wrong with your email. Please revise.';
 	}
 
 	$errors = array("name-error"=>$name_error , "message-error"=>$mess_error, "subject-error"=>$sub_error, "email-error"=>$email_error);
 
-	$msg = "Hey ". $name. "! thank you for your email. We will respond shorty.";
+	$msg = "Hey ". $name. "! Thank you for your email. We will respond shorty.";
 	
 
 	if (!array_filter($errors)) {

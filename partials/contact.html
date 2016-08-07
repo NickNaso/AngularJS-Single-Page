@@ -6,11 +6,11 @@
 			<form name="contactForm" class="form-horizontal" ng-submit="submitForm()" method="post" novalidate>
 				<div class="center-fields">
 					<div class = "text-center"> 
-						{{nameError}}
-						{{emailError}}
-						{{subjectError}}
-						{{messageError}}
-						{{successMsg}} 
+						<div ng-class = "{'alert alert-danger': nameError}">{{nameError}}</div>
+						<div ng-class = "{'alert alert-danger': emailError}">{{emailError}}</div>
+						<div ng-class = "{'alert alert-danger': subjectError}">{{subjectError}}</div>
+						<div ng-class = "{'alert alert-danger': messageError}">{{messageError}}</div>
+						<div ng-class = "{'alert alert-success': successMsg}">{{successMsg}}</div>
 					</div>
 
 					<div class="form-group" ng-class="{ 'has-error': contactForm.name.$touched && contactForm.name.$invalid }">				

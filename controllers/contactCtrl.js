@@ -3,7 +3,6 @@ angular
 	.controller('contactCtrl', function($scope, $http){
 		$scope.contact = {name : '', email : '', subject : '', message : ''};
 		
-		
 
 		$scope.submitForm = function() {
      		var config = {
@@ -22,6 +21,7 @@ angular
 				if(typeof(response.data) == 'string') {
 					// make all error messages blank when 
 					// php return a string (which is the success message)
+					// which means there are no error messages being sent from php
 					$scope.nameError = "";
 					$scope.messageError = "";
 					$scope.subjectError = "";
@@ -32,7 +32,9 @@ angular
 					$scope.successMsg = response.data;
 
 					// clear all form values 
-					// ######### This is not working currently ############
+					// and set the inputs to prisitine and untouched 
+					// so that angular will not display any error messages 
+					// once a user submits the form successfully 
 					
 					$scope.contact = {};
 					$scope.contactForm.$setPristine();

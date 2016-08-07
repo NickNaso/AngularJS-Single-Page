@@ -33,7 +33,10 @@ angular
 
 					// clear all form values 
 					// ######### This is not working currently ############
+					
+					$scope.contact = {};
 					$scope.contactForm.$setPristine();
+					$scope.contactForm.$setUntouched();
 
 					console.log($scope.successMsg);
 					console.log("not an object");
@@ -47,6 +50,9 @@ angular
 					$scope.messageError = response.data['message-error'];
 					$scope.subjectError = response.data['subject-error'];
 					$scope.emailError = response.data['email-error'];
+
+					//clear the success message if errors come back from php
+					$scope.successMsg = "";
 
 					console.log("it is an object");
 					}

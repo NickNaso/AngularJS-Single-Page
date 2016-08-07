@@ -34,7 +34,7 @@
 		}
 		
 	} else {
-		$name_error = 'You forgot to enter a subject ';
+		$name_error = 'You forgot to enter your name ';
 	}
 
 	if (!empty($message)) {

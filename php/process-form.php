@@ -67,7 +67,7 @@
 			$email_error = "";
 		} 
 	} else {
-		$email_error = 'Oops somthing looks wrong with your email. Please revise.';
+		$email_error = 'Oops something looks wrong with your email. Please revise.';
 	}
 
 	$errors = array("name-error"=>$name_error , "message-error"=>$mess_error, "subject-error"=>$sub_error, "email-error"=>$email_error);

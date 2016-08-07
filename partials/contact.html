@@ -3,15 +3,15 @@
 <div ng-controller="contactCtrl">
 	<div class="container center-form">
 		<div class="row">
-			<form name="contactForm" class="form-horizontal" ng-submit="submitForm()" method="post" novalidate>
-				<div class="center-fields">
-					<div class = "text-center"> 
+			<div class = "text-center"> 
 						<div ng-class = "{'alert alert-danger': nameError}">{{nameError}}</div>
 						<div ng-class = "{'alert alert-danger': emailError}">{{emailError}}</div>
 						<div ng-class = "{'alert alert-danger': subjectError}">{{subjectError}}</div>
 						<div ng-class = "{'alert alert-danger': messageError}">{{messageError}}</div>
 						<div ng-class = "{'alert alert-success': successMsg}">{{successMsg}}</div>
-					</div>
+			</div>
+			<form name="contactForm" class="form-horizontal" ng-submit="submitForm()" method="post" novalidate>
+				<div class="center-fields">
 
 					<div class="form-group" ng-class="{ 'has-error': contactForm.name.$touched && contactForm.name.$invalid }">				
 						<div class="col-xs-12">

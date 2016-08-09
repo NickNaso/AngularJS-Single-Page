@@ -2,10 +2,6 @@
 Main AngularJS Single-Page Web App
 */
 
-var w = window.innerWidth;
-
-console.log(w);
-
 var app = angular.module('Single-Page-App', ['ui.router', 'ngAnimate', 'ngMessages']);
 
 

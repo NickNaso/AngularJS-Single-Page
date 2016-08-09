@@ -12,7 +12,7 @@
 	
 	//Define patern for preg_match validation
 	$pattern = "/^[a-zA-Z0-9 ]*$/";
-	$mess_pattern = "/^[a-zA-Z0-9 \?\.\(\)\-\_]*$/";
+	$mess_pattern = "/^[a-zA-Z0-9 \?\.\(\)\-\_\!\$\%]*$/";
 
 	//sanitize the values and validate
 	$subject = filter_var($subject, FILTER_SANITIZE_STRING);

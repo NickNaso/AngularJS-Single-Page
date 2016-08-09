@@ -19,11 +19,13 @@ body {
 
 }
 
+/* this is to deactivate hover and focus background color change behind the social icons */
 .navbar-custom .navbar-right .social-icon > a:hover, .social-icon > a:focus {
     text-decoration: none;
     background-color: none;
 }
 
+/* this is to customize hover and focus background color change behind the page links */
 .navbar-default .navbar-nav .page-link > a:hover, .navbar-default .navbar-nav .page-link > a:focus {
     background-color: #FFFAE9;
     color: black;

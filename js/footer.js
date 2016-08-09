@@ -3,7 +3,7 @@ angular
 	.directive('appFooter', function () {
 	    return {
 	        restrict: 'E',
-	        template: '&copy; Your Company {{ getYearCtrl.date | date:"yyyy" }}',
+	        template: '&copy; Manuel Music {{ getYearCtrl.date | date:"yyyy" }}',
 	        controller: function(){
 	            this.date = Date.now();
 	        },

@@ -16,11 +16,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			}
 		}	
 	})
-	.state("about", {
-		url:"/about",
+	.state("listen", {
+		url:"/listen",
 		views: {
 			"main@": {
-				templateUrl: "partials/about.html"
+				templateUrl: "partials/listen.html"
+			}
+		}	
+	})
+	.state("watch", {
+		url:"/watch",
+		views: {
+			"main@": {
+				templateUrl: "partials/watch.html"
 			}
 		}	
 	})

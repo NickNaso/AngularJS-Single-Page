@@ -16,6 +16,36 @@ body {
 .social-icon {
   margin-right: -10px;
   margin-left: -10px;
+
+}
+
+.navbar-custom .navbar-right .social-icon > a:hover, .social-icon > a:focus {
+    text-decoration: none;
+    background-color: none;
+}
+
+.navbar-default .navbar-nav .page-link > a:hover, .navbar-default .navbar-nav .page-link > a:focus {
+    background-color: #FFFAE9;
+    color: black;
+}
+
+
+@media screen and (max-width:766px){
+  #contact {
+  clear:both;
+}
+
+.social-icon {
+  margin-left: 2px;
+  float:left;
+}
+
+.navbar-right img {
+  width:25px;
+  height:25px;
+  float:left;
+}
+
 }
 
 .cover-art {

@@ -5,7 +5,7 @@ Main AngularJS Single-Page Web App
 var app = angular.module('Single-Page-App', ['ui.router', 'ngAnimate', 'ngMessages']);
 
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/home');
 	$stateProvider
 	.state("home", {
@@ -14,7 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			"main@": {
 				templateUrl: "partials/home.html"
 			}
-		}	
+		}
 	})
 	.state("listen", {
 		url:"/listen",
@@ -22,7 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			"main@": {
 				templateUrl: "partials/listen.html"
 			}
-		}	
+		}
 	})
 	.state("watch", {
 		url:"/watch",
@@ -30,7 +30,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			"main@": {
 				templateUrl: "partials/watch.html"
 			}
-		}	
+		}
 	})
 	.state("contact", {
 		url:"/contact",
@@ -38,10 +38,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			"main@": {
 				templateUrl: "partials/contact.html"
 			}
-		}	
+		}
 	})
-})
-
-
-
-	
+}])

@@ -2,10 +2,13 @@
   "name": "AngularJS-Single-Page",
   "description": "Single page application using AngularJS and PHP",
   "main": "server.js",
+  "engines": {
+    "node": "4.4.4"
+  },
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "~4.9.8"
+    "express": "4.9.8"
   }
 }

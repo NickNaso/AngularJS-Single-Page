@@ -1,8 +1,10 @@
 var app = angular.module('Single-Page-App', ['ui.router', 'ngMessages']);
 
 
+
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/home');
+
 	var home = {
 	    name: 'home',
 	    url: '/home',
@@ -32,6 +34,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 				}
 			}
 	  }
+
 
 		var contact = {
 	    name: 'contact',

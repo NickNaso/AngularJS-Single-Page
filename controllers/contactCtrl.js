@@ -1,6 +1,4 @@
-angular
-	.module('Single-Page-App')
-	.controller('contactCtrl', ['$scope', '$http', function($scope, $http){
+app.controller('contactCtrl', ['$scope', '$http', function($scope, $http){
 		$scope.contact = {name : '', email : '', subject : '', message : ''};
 
 

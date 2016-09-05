@@ -2,7 +2,6 @@ var app = angular.module('Single-Page-App', ['ui.router', 'ngMessages']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/home');
-	$urlRouterProvider.otherwise('/home');
 	$stateProvider
 	.state("home", {
 		url:"/home",

@@ -9,6 +9,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "ejs": "^2.5.1",
     "express": "4.9.8"
   }
 }
